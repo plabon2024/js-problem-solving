@@ -3,27 +3,35 @@ function reverseString(string) {
   return string.split("").reverse().join("");
 }
 
+console.log("1 3 5 8 10")
+console.log("\nReverse a String");
+console.log("bat to =>",reverseString("bat"))
+console.log('cat to =>',reverseString("cat"))
+
 // Problem 2: Count Vowels in a String
 function countVowels(str) {
   const vowels = "aeiouAEIOU";
   return [...str].filter((char) => vowels.includes(char)).length;
 }
-
+console.log("\nCheck for Palindrome");
 // Problem 3: Check for Palindrome
 function isPalindrome(str) {
   const reversed = str.split("").reverse().join("");
   return str === reversed;
 }
+console.log("is bob plaindrone :",isPalindrome("level"))
+console.log("is google palindrone :",isPalindrome("google"))
 
 // Problem 4: Find the Maximum Number
 function findMax(arr) {
   return Math.max(...arr);
 }
-
+console.log("\nRemove Duplicates from an Array");
 // Problem 5: Remove Duplicates from an Array
 function removeDuplicates(arr) {
   return [...new Set(arr)];
 }
+console.log(removeDuplicates([ 1, 2,2, 3, 4, 4]));
 
 // Problem 6: Sum of All Numbers in an Array
 function sumArray(arr) {
@@ -42,7 +50,8 @@ function capitalizeWords(str) {
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ");
 }
-
+console.log("\nCapitalize First Letter of Each Word");
+console.log(capitalizeWords("hello world"));
 // Problem 9: Find the Factorial of a Number
 function factorial(n) {
   let result = 1;
@@ -51,7 +60,7 @@ function factorial(n) {
   }
   return result;
 }
-
+console.log("\nPingPong Challenge");
 // Problem 10: PingPong Challenge
 function pingPong() {
   for (let i = 1; i <= 20; i++) {
@@ -66,3 +75,4 @@ function pingPong() {
     }
   }
 }
+pingPong()
